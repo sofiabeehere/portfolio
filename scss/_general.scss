@@ -1,0 +1,68 @@
+/* TYPOGRAPHY */
+@import url('https://fonts.googleapis.com/css?family=Assistant:400,700|Merriweather:400,700&display=swap');
+
+/* GENERAL */
+
+html {
+    border-top: solid 7px #D9B45F;
+}
+
+body {
+    margin: 8% 25%;
+    line-height: 0;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        margin: 20% 15%;
+    }
+}
+
+/* HEADER */
+header {
+    img {
+        display: block;
+        width: 10%;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+/* FOOTER */
+footer {
+    margin-top: 3em;
+
+    a {
+        @include fluid-type($min_width, $max_width, 18px, 22px);
+        color: rgba(0, 0, 0, 0.5);
+        margin-right: 1em;
+        transition: color 0.5s;
+
+        &:hover {
+            color: rgba(0, 0, 0, 1);
+            transition: color 0.5s;
+        }
+
+        &#blog-link {
+            font-family: Assistant;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 31px;
+            letter-spacing: 0.05em;
+            text-decoration: none;
+            border-bottom: 1px solid #E5E5E5;
+            box-shadow: 0px -9px 0px #E5E5E5 inset;
+            transition: all 0.5s;
+
+            &:hover {
+                color: black;
+                border-bottom: 1px solid #D9B45F;
+                box-shadow: 0px -9px 0px #D9B45F inset;
+                transition: all 0.5s;
+            }
+        }
+    }
+}

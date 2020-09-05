@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <!-- Primary Meta Tags -->
+    <title>Sofia Bautista</title>
+    <meta name="title" content="Sofia Bautista">
+    <meta name="description" content="I'm currently Program Manager at Evident Point Software working on making online reading experiences better.">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="sofiabautista.ca">
+    <meta property="og:title" content="Sofia Bautista">
+    <meta property="og:description" content="I'm currently Program Manager at Evident Point Software working on making online reading experiences better.">
+    <meta property="og:image" content="img/website-meta.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="sofiabautista.ca">
+    <meta property="twitter:title" content="Sofia Bautista">
+    <meta property="twitter:description" content="I'm currently Program Manager at Evident Point Software working on making online reading experiences better.">
+    <meta property="twitter:image" content="img/website-meta.png">
+
+    <!-- Stylesheets -->
+    <link rel="preload" type="text/css" href="{{ '/css/manifest.css' | url }}" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="{{ '/css/manifest.css' | url }}"> <!-- fallback for browsers not supporting preload -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" rel="preload" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" > <!-- fallback for browsers not supporting preload -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" rel="preload" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css"> <!-- fallback for browsers not supporting preload -->.
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/solid.min.css" rel="preload" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/solid.min.css"> <!-- fallback for browsers not supporting preload -->
+
+    <!-- Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150303969-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-150303969-1');
+    </script>
+
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="HCDyi10Ic9mpU_aD5oL0j_zd1gXt_8GpCsajh_-ELJc" />
+  </head>
+  <body>
+    <header>
+        <a href="/"><img src="{{ '/img/logo.svg' | url }}" id="logo" alt="personal logo"></a>
+    </header>
+
+    {{ content | safe }}
+
+    <footer>
+        <a href="https://www.linkedin.com/in/sofia-bautista-a5a94b149/" target="_blank" aria-label="Go to LinkedIn Profile" rel="noreferrer"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/sofiabeehere" target="_blank" aria-label="Go to Twitter Profile" rel="noreferrer"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/sofiabeehere" target="_blank" aria-Label="Go to Github Profile" rel="noreferrer"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/sofiabeehere/" target="_blank" aria-label="Go to Instagram Profile" rel="noreferrer"><i class="fab fa-instagram"></i></a>
+        <a href="/contact" aria-label="Go to Contact Page" rel="noreferrer"><i class="fas fa-envelope"></i></a>
+        <a href="/blog" id="blog-link" aria-label="Go to Blog" rel="noreferrer">Blog</a>
+    </footer>
+
+    <script>
+        /* Logo Animation from https://codepen.io/anodpixels/pen/qECtd */
+        var rotate = 50;
+
+        var pageX = $(document).width();
+        var pageY = $(document).height();
+        var mouseY=0;
+        var mouseX=0;
+
+        $(document).mousemove(function( event ) {
+            mouseX = event.pageY;
+            mouseY = event.pageX;
+            rotateY = -(pageY/2-mouseY)/pageY*rotate;
+            rotateX = (pageX/2-mouseX)/pageX*rotate;
+            $('#logo').css({ '-webkit-transform' : 'translateX(0) translateY(0) scale(1) perspective( 1960px ) rotateY('+rotateY+'deg) rotateX('+rotateX+'deg)'});
+        });
+
+        // Toggle Page Visibility
+        $(document).ready(function() {
+            /*$('#intro').show();
+            $('#contact').hide();
+
+            $("#open-form").click(function(){
+                $('#intro').hide();
+                $('#contact').show();
+            });
+
+            $("#cancel, #logo").on('click', function(){
+                $('#intro').show();
+                $('#contact').hide();
+                history.pushState(null, null, window.location.href.split('#')[0]);
+            }); */           
+
+        });
+    </script>
+  </body>
+</html>

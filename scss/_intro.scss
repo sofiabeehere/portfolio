@@ -1,0 +1,59 @@
+/* INTRO */
+
+h1 {
+    @include fluid-type($min_width, $max_width, 48px, 50px);
+    font-family: 'Assistant', sans-serif;
+    font-display: swap;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding-top: 0.1em;
+    line-height: 1em;
+}
+
+h2 {
+    @include fluid-type($min_width, $max_width, 34px, 36px);
+    font-family: 'Assistant', sans-serif;
+    font-display: swap;
+    font-weight: 400;
+    line-height: 1em;
+    letter-spacing: 0.05em;
+}
+
+p {
+    @include fluid-type($min_width, $max_width, 12px, 16px);
+    font-family: 'Merriweather', sans-serif;
+    font-display: swap;
+    font-weight: 400;
+    line-height: 176%;
+    letter-spacing: 0.1em;
+    margin: 1.5em 0;
+
+    span {
+        text-decoration: line-through;
+
+        a {
+            border-bottom: none;
+            box-shadow: none;
+
+            &:hover {
+                border-bottom: none;
+                box-shadow: none;
+            }
+        }
+    }
+
+    a {
+        font-weight: 700;
+        color: black;
+        text-decoration: none;
+        border-bottom: 1px solid #E5E5E5;
+        box-shadow: 0px -9px 0px #E5E5E5 inset;
+        transition: all 0.5s;
+
+        &:hover {
+            border-bottom: 1px solid #D9B45F;
+            box-shadow: 0px -9px 0px #D9B45F inset;
+            transition: all 0.5s;
+        }
+    }
+}

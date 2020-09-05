@@ -1,0 +1,14 @@
+{% for year in postslist %}
+  <p>{{ year.date | displayYearOnly }}</p>
+  <ul>
+    {# {% for post in postslist | yearFilter(postslist, post.date | yearOnly) %} #}
+    {% for post in postslist | postsByYear(year.date | displayYearOnly) %}
+        <li>
+          <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+          <strong>
+            <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+          </strong>
+        </li>
+    {% endfor %}
+  </ul>
+{% endfor %}
