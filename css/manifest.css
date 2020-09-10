@@ -234,7 +234,7 @@ form textarea:valid {
   border: solid 1px #E5E5E5;
   transition: border 0.7s;
 }
-form button {
+form #submit {
   font-family: "Assistant", sans-serif;
   font-display: swap;
   font-weight: 700;
@@ -247,31 +247,54 @@ form button {
   color: #000;
   transition: all 0.7s;
 }
-form button {
+form #submit {
   font-size: 12px;
 }
 @media screen and (min-width: 320px) {
-  form button {
+  form #submit {
     font-size: calc(12px + 4 * ((100vw - 320px) / 880));
   }
 }
 @media screen and (min-width: 1200px) {
-  form button {
+  form #submit {
     font-size: 16px;
   }
 }
-form button:hover {
-  cursor: pointer;
-}
-form button:hover:not(#cancel) {
+form #submit:hover {
   cursor: pointer;
   background-color: #000;
   color: #fff;
   transition: all 0.7s;
 }
-form button#cancel {
+form #cancel {
+  font-family: "Assistant", sans-serif;
+  font-display: swap;
   font-weight: 400;
+  text-decoration: none;
+  letter-spacing: 0.1em;
   border: none;
+  width: 110px;
+  border-radius: 50px;
+  padding: 0.5em 1em;
+  background-color: #fff;
+  color: #000;
+  transition: all 0.7s;
+}
+form #cancel {
+  font-size: 12px;
+}
+@media screen and (min-width: 320px) {
+  form #cancel {
+    font-size: calc(12px + 4 * ((100vw - 320px) / 880));
+  }
+}
+@media screen and (min-width: 1200px) {
+  form #cancel {
+    font-size: 16px;
+  }
+}
+form #cancel:hover {
+  cursor: pointer;
 }
 
 main h2 {
