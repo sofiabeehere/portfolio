@@ -27,7 +27,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" rel="preload" as="style" onload="this.rel='stylesheet'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" > <!-- fallback for browsers not supporting preload -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" rel="preload" as="style" onload="this.rel='stylesheet'">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css"> <!-- fallback for browsers not supporting preload -->.
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css"> <!-- fallback for browsers not supporting preload -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/solid.min.css" rel="preload" as="style" onload="this.rel='stylesheet'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/solid.min.css"> <!-- fallback for browsers not supporting preload -->
 
@@ -53,7 +53,7 @@
   </head>
   <body>
     <header>
-        <a href="/"><img src="{{ '/img/logo.svg' | url }}" id="logo" alt="personal logo"></a>
+      <a href="/"><img src="{{ '/img/logo.svg' | url }}" id="logo" alt="personal logo"/></a>
     </header>
 
     {{ content | safe }}
@@ -82,24 +82,6 @@
             rotateY = -(pageY/2-mouseY)/pageY*rotate;
             rotateX = (pageX/2-mouseX)/pageX*rotate;
             $('#logo').css({ '-webkit-transform' : 'translateX(0) translateY(0) scale(1) perspective( 1960px ) rotateY('+rotateY+'deg) rotateX('+rotateX+'deg)'});
-        });
-
-        // Toggle Page Visibility
-        $(document).ready(function() {
-            /*$('#intro').show();
-            $('#contact').hide();
-
-            $("#open-form").click(function(){
-                $('#intro').hide();
-                $('#contact').show();
-            });
-
-            $("#cancel, #logo").on('click', function(){
-                $('#intro').show();
-                $('#contact').hide();
-                history.pushState(null, null, window.location.href.split('#')[0]);
-            }); */           
-
         });
     </script>
     <script>
