@@ -1,3 +1,6 @@
 node_modules
 package-lock.json
-_site
+_site/*
+
+# Except these directories:
+!_site/admin
