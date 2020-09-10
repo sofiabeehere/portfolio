@@ -1,9 +1,9 @@
 ---
 layout: layouts/post.njk
+date: 2020-04-18
 title: My first post
 description: The first post on the Eleventy + Netlify CMS from scratch blog
-date: 2020-04-18
-featuredImage: /img/uploads/image1.jpg
+featuredImage: /img/uploads/pexels-lukas-kloeppel-2416602.jpg
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan orci ut leo fringilla lacinia. Proin sodales dictum tortor vel vestibulum. Morbi turpis velit, tristique eget interdum ac, scelerisque eu tortor. Quisque pharetra venenatis lacus at pulvinar. Integer mattis efficitur tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
 
