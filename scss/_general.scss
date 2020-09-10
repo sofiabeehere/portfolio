@@ -12,7 +12,13 @@ body {
     line-height: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1400px) {
+    body {
+        margin: 20% 15%;
+    }
+}
+
+@media screen and (max-width: 992px) {
     body {
         margin: 20% 15%;
     }
