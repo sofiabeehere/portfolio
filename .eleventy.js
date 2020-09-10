@@ -23,6 +23,12 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("readableDate", dateObj => {
         return DateTime.fromJSDate(dateObj, {
             zone: 'utc'
+        }).toFormat("MMM dd, yyyy").toUpperCase();
+    });
+
+    eleventyConfig.addFilter("displayMonthYear", dateObj => {
+        return DateTime.fromJSDate(dateObj, {
+            zone: 'utc'
         }).toFormat("MMM dd").toUpperCase();
     });
 

@@ -2,7 +2,17 @@
 layout: layouts/base.njk
 permalink: /blog/posts/{{ title | slug }}/index.html
 ---
-<h1>{{ title }}</h1>
-<h3>{{ date | readableDate }}</h3>
-<img src="{{ featuredImage | url }}" alt="{{ featuredImage }}"></img>
-<p>{{ content | safe }}</p>
+<article>
+    
+    <header>
+        <h3>{{ date | readableDate }}</h3>
+        <h1>{{ title }}</h1>
+        <h2>{{ description }}</h2>
+    </header>
+    
+    <section class="article-content">
+        <img src="{{ featuredImage | url }}" alt="{{ featuredImage }}" id="featured-img"></img>
+        <p>{{ content | safe }}</p>
+    </section>
+
+</article>

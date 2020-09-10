@@ -1,14 +1,14 @@
+<main id="blog" role="main">
 {% for year in postslist %}
-  <p>{{ year.date | displayYearOnly }}</p>
+  <h2>{{ year.date | displayYearOnly }}</h2>
   <ul>
     {# {% for post in postslist | yearFilter(postslist, post.date | yearOnly) %} #}
     {% for post in postslist | postsByYear(year.date | displayYearOnly) %}
         <li>
-          <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-          <strong>
-            <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-          </strong>
+          <time datetime="{{ post.date | htmlDateString }}">{{ post.date | displayMonthYear }}</time>
+          <a href="{{ post.url | url }}">{{ post.data.title }}</a>
         </li>
     {% endfor %}
   </ul>
 {% endfor %}
+</main>
