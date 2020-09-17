@@ -51,7 +51,7 @@ footer {
             transition: color 0.5s;
         }
 
-        &#blog-link {
+        &#footer-link {
             @include fluid-type($min_width, $max_width, 16px, 20px);
             font-family: 'Merriweather', sans-serif;
             font-display: swap;
