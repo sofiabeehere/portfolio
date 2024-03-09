@@ -24,6 +24,13 @@ body {
     }
 }
 
+@media screen and (max-width: 400px) {
+    body {
+        margin: 20% 12%;
+    }
+}
+
+
 /* HEADER */
 header {
     img {
@@ -39,6 +46,9 @@ header {
 /* FOOTER */
 footer {
     margin-top: 3em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
 
     a {
         @include fluid-type($min_width, $max_width, 18px, 22px);
@@ -56,7 +66,7 @@ footer {
             font-family: 'Merriweather', sans-serif;
             font-display: swap;
             font-weight: 700;
-            line-height: 176%;
+            line-height: 115%;
             letter-spacing: 0.03em;
             font-style: normal;
             text-decoration: none;
