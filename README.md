@@ -14,4 +14,4 @@ where `--watch` allows you to:
 
 [Production URL](https://sofiabautista.ca/)
 
-Any commits pushed to `master` branch are automatically deployed using [Netlify](https://app.netlify.com/).
+Any commits pushed to `master` branch are automatically deployed using [Render](https://render.com/).
